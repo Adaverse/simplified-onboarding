@@ -78,35 +78,34 @@ export default function Homes() {
                             spacing={2}
                             justifyContent="center"
                         >
-                            <Button variant="contained">Main call to action</Button>
-                            <Button variant="outlined">Secondary action</Button>
+                            <Button variant="contained">View Onboarding folks</Button>
+                            {/*<Button variant="outlined">Secondary action</Button>    */}
                         </Stack>
                     </Container>
                 </Box>
                 <Container sx={{ py: 8 }} maxWidth="md">
                     {/* End hero unit */}
                     <Grid container spacing={4}>
-                        {cards.map((card) => (
-                            <Grid item key={card} xs={12} sm={6} md={4}>
+                        {/*{cards.map((card) => (*/}
+                            <Grid item key={1} xs={12} sm={6} md={4}>
                                 <Card
                                     sx={{ height: '100%', display: 'flex', flexDirection: 'column' }}
                                 >
-                                    <CardMedia
+                                    <Box
                                         component="img"
                                         sx={{
-                                            // 16:9
-                                            pt: '56.25%',
+                                            height: 250,
+                                            width: 300,
                                         }}
-                                        image="https://source.unsplash.com/random"
-                                        alt="random"
+                                        alt="The house from the offer."
+                                        src="https://source.unsplash.com/random"
                                     />
                                     <CardContent sx={{ flexGrow: 1 }}>
-                                        <Typography gutterBottom variant="h5" component="h2">
-                                            Heading
+                                        <Typography gutterBottom variant="h7" component="h2">
+                                            RAMCO Payroll department , click to view
                                         </Typography>
                                         <Typography>
-                                            This is a media card. You can use this section to describe the
-                                            content.
+
                                         </Typography>
                                     </CardContent>
                                     <CardActions>
@@ -115,7 +114,142 @@ export default function Homes() {
                                     </CardActions>
                                 </Card>
                             </Grid>
-                        ))}
+                        <Grid item key={2} xs={12} sm={6} md={4}>
+                            <Card
+                                sx={{ height: '100%', display: 'flex', flexDirection: 'column' }}
+                            >
+                                <Box
+                                    component="img"
+                                    sx={{
+                                        height: 250,
+                                        width: 300,
+                                    }}
+                                    alt="The house from the offer."
+                                    src="https://source.unsplash.com/random"
+                                />
+                                <CardContent sx={{ flexGrow: 1 }}>
+                                    <Typography gutterBottom variant="h7" component="h2">
+                                        Self Service , click to view
+                                    </Typography>
+                                    <Typography>
+
+                                    </Typography>
+                                </CardContent>
+                                <CardActions>
+                                    <Button size="small">View</Button>
+                                    <Button size="small">Edit</Button>
+                                </CardActions>
+                            </Card>
+                        </Grid>
+                        <Grid item key={3} xs={12} sm={6} md={4}>
+                            <Card
+                                sx={{ height: '100%', display: 'flex', flexDirection: 'column' }}
+                            >
+                                <Box
+                                    component="img"
+                                    sx={{
+                                        height: 250,
+                                        width: 300,
+                                    }}
+                                    alt="The house from the offer."
+                                    src="https://source.unsplash.com/random"
+                                />
+                                <CardContent sx={{ flexGrow: 1 }}>
+                                    <Typography gutterBottom variant="h7" component="h2">
+                                        My Digital Workplace , click to view
+                                    </Typography>
+                                    <Typography>
+
+                                    </Typography>
+                                </CardContent>
+                                <CardActions>
+                                    <Button size="small">View</Button>
+                                    <Button size="small">Edit</Button>
+                                </CardActions>
+                            </Card>
+                        </Grid>
+                        <Grid item key={4} xs={12} sm={6} md={4}>
+                            <Card
+                                sx={{ height: '100%', display: 'flex', flexDirection: 'column' }}
+                            >
+                                <Box
+                                    component="img"
+                                    sx={{
+                                        height: 250,
+                                        width: 300,
+                                    }}
+                                    alt="The house from the offer."
+                                    src="https://source.unsplash.com/random"
+                                />
+                                <CardContent sx={{ flexGrow: 1 }}>
+                                    <Typography gutterBottom variant="h7" component="h2">
+                                        Impulse/Serval
+                                    </Typography>
+                                    <Typography>
+
+                                    </Typography>
+                                </CardContent>
+                                <CardActions>
+                                    <Button size="small">View</Button>
+                                    <Button size="small">Edit</Button>
+                                </CardActions>
+                            </Card>
+                        </Grid>
+                        <Grid item key={1} xs={12} sm={6} md={4}>
+                            <Card
+                                sx={{ height: '100%', display: 'flex', flexDirection: 'column' }}
+                            >
+                                <Box
+                                    component="img"
+                                    sx={{
+                                        height: 250,
+                                        width: 300,
+                                    }}
+                                    alt="The house from the offer."
+                                    src="https://source.unsplash.com/random"
+                                />
+                                <CardContent sx={{ flexGrow: 1 }}>
+                                    <Typography gutterBottom variant="h7" component="h2">
+                                        My learning , click to view
+                                    </Typography>
+                                    <Typography>
+
+                                    </Typography>
+                                </CardContent>
+                                <CardActions>
+                                    <Button size="small">View</Button>
+                                    <Button size="small">Edit</Button>
+                                </CardActions>
+                            </Card>
+                        </Grid>
+                        <Grid item key={1} xs={12} sm={6} md={4}>
+                            <Card
+                                sx={{ height: '100%', display: 'flex', flexDirection: 'column' }}
+                            >
+                                <Box
+                                    component="img"
+                                    sx={{
+                                        height: 250,
+                                        width: 300,
+                                    }}
+                                    alt="The house from the offer."
+                                    src="https://source.unsplash.com/random"
+                                />
+                                <CardContent sx={{ flexGrow: 1 }}>
+                                    <Typography gutterBottom variant="h7" component="h2">
+                                        Plural Sight , click to view
+                                    </Typography>
+                                    <Typography>
+
+                                    </Typography>
+                                </CardContent>
+                                <CardActions>
+                                    <Button size="small">View</Button>
+                                    <Button size="small">Edit</Button>
+                                </CardActions>
+                            </Card>
+                        </Grid>
+                        {/*))}*/}
                     </Grid>
                 </Container>
             </main>
@@ -130,7 +264,7 @@ export default function Homes() {
                     color="text.secondary"
                     component="p"
                 >
-                    Something here to give the footer a purpose!
+                    END OF PAGE
                 </Typography>
                 <Copyright />
             </Box>
