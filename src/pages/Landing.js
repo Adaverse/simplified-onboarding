@@ -1,5 +1,5 @@
 import Container from 'react-bootstrap/Container';
-import Navbar from 'react-bootstrap/Navbar';
+// import Navbar from 'react-bootstrap/Navbar';
 import Stack from 'react-bootstrap/Stack';
 // import Button from 'react-bootstrap/Button'
 import Row from 'react-bootstrap/Row';
@@ -13,6 +13,7 @@ import Button from '@mui/material/Button';
 import { styled } from '@mui/material/styles';
 import MuiGrid from '@mui/material/Grid';
 import Divider from '@mui/material/Divider';
+import Navbar from '../components/navbar/navbar'
 
 const Grid = styled(MuiGrid)(({ theme }) => ({
     width: '100%',
@@ -44,6 +45,7 @@ function Landing() {
                 Hi
             </div>
         </div> */}
+        <Navbar/>
         <Grid container>
         <Grid item xs>
             {content}

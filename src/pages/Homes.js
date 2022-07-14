@@ -15,6 +15,7 @@ import Typography from '@mui/material/Typography';
 import Container from '@mui/material/Container';
 import Link from '@mui/material/Link';
 import { createTheme, ThemeProvider } from '@mui/material/styles';
+import Navbar from '../components/navbar/navbar';
 
 function Copyright() {
     return (
@@ -37,7 +38,7 @@ export default function Homes() {
     return (
         <ThemeProvider theme={theme}>
             <CssBaseline />
-            <AppBar position="relative">
+            {/* <AppBar position="relative">
                 <Toolbar>
                     <CameraIcon sx={{ mr: 2 }} />
                     <Typography variant="h6" color="inherit" noWrap>
@@ -45,7 +46,8 @@ export default function Homes() {
                         GENERALE
                     </Typography>
                 </Toolbar>
-            </AppBar>
+            </AppBar> */}
+            <Navbar/>
             <main>
                 {/* Hero unit */}
                 <Box
