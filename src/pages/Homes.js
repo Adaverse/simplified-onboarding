@@ -17,7 +17,8 @@ import Container from '@mui/material/Container';
 import Link from '@mui/material/Link';
 import { createTheme, ThemeProvider } from '@mui/material/styles';
 import Navbar from '../components/navbar/navbar';
-import { bgcolor, fontStyle } from '@mui/system';
+
+import { students } from "../components/student/data"
 
 function Copyright() {
     return (
@@ -37,6 +38,29 @@ const cards = [1, 2, 3, 4, 5, 6, 7, 8, 9];
 const theme = createTheme();
 
 export default function Homes() {
+    const history = useHistory();
+    const [user, setUser] = React.useState(localStorage.getItem("user"));
+
+    // React.useEffect( () =>  {
+    //     console.log(user);
+    // }, [user])   
+
+    const handleStudentClick = () =>  {
+        for( let i = 0; i < students.length; i++) {
+            console.log(students[i].name);
+            if (students[i].name === user) {
+                history.push("/onboardProgress", {data: students[i]})
+                return 
+            } else if (students[i].name === user) {
+                history.push("/onboardProgress", {data: students[i]})
+                return 
+            } else if (students[i].name === user){
+                history.push("/onboardProgress", {data: students[i]})
+                return 
+            }
+        }
+        history.push("/onboardProgress", {data: {name: "John Doe", progress: 0}});
+    }
 
     return (
         <ThemeProvider theme={theme}>
@@ -90,183 +114,14 @@ export default function Homes() {
                             spacing={2}
                             justifyContent="center"
                         >
-                            <a href='/homes/viewOnboarding'> 
+                            {user === "admin" ?                             
+                            <a href='/viewOnboarding'> 
                                 <Button variant="contained">View Onboarding folks</Button>
                                 {/*<Button variant="outlined">Secondary action</Button>    */}
-                            </a>
-                           <a href = "/address"> <Button variant="contained">Complete the Onboarding</Button> </a>
+                            </a> : <Button variant="contained" onClick={handleStudentClick}>Complete the Onboarding</Button>}
                         </Stack>
                     </Container>
                 </Box>
-                <Container sx={{ py: 8 }} maxWidth="md">
-                    {/* End hero unit */}
-                    <Grid container spacing={4}>
-                        {/*{cards.map((card) => (*/}
-                            <Grid item key={1} xs={12} sm={6} md={4}>
-                                <Card
-                                    sx={{ height: '100%', display: 'flex', flexDirection: 'column' }}
-                                >
-                                    <Box
-                                        component="img"
-                                        sx={{
-                                            height: 250,
-                                            width: 300,
-                                        }}
-                                        alt="The house from the offer."
-                                        src="https://source.unsplash.com/random"
-                                    />
-                                    <CardContent sx={{ flexGrow: 1 }}>
-                                        <Typography gutterBottom variant="h7" component="h2">
-                                            RAMCO Payroll department
-                                        </Typography>
-                                        <Typography>
-
-                                        </Typography>
-                                    </CardContent>
-                                    <CardActions>
-                                        <Button size="small">View</Button>
-                                        <Button size="small">Edit</Button>
-                                    </CardActions>
-                                </Card>
-                            </Grid>
-                        <Grid item key={2} xs={12} sm={6} md={4}>
-                            <Card
-                                sx={{ height: '100%', display: 'flex', flexDirection: 'column' }}
-                            >
-                                <Box
-                                    component="img"
-                                    sx={{
-                                        height: 250,
-                                        width: 300,
-                                    }}
-                                    alt="The house from the offer."
-                                    src="https://source.unsplash.com/random"
-                                />
-                                <CardContent sx={{ flexGrow: 1 }}>
-                                    <Typography gutterBottom variant="h7" component="h2">
-                                        Self Service
-                                    </Typography>
-                                    <Typography>
-
-                                    </Typography>
-                                </CardContent>
-                                <CardActions>
-                                    <Button size="small">View</Button>
-                                    <Button size="small">Edit</Button>
-                                </CardActions>
-                            </Card>
-                        </Grid>
-                        <Grid item key={3} xs={12} sm={6} md={4}>
-                            <Card
-                                sx={{ height: '100%', display: 'flex', flexDirection: 'column' }}
-                            >
-                                <Box
-                                    component="img"
-                                    sx={{
-                                        height: 250,
-                                        width: 300,
-                                    }}
-                                    alt="The house from the offer."
-                                    src="https://source.unsplash.com/random"
-                                />
-                                <CardContent sx={{ flexGrow: 1 }}>
-                                    <Typography gutterBottom variant="h7" component="h2">
-                                        My Digital Workplace
-                                    </Typography>
-                                    <Typography>
-
-                                    </Typography>
-                                </CardContent>
-                                <CardActions>
-                                    <Button size="small">View</Button>
-                                    <Button size="small">Edit</Button>
-                                </CardActions>
-                            </Card>
-                        </Grid>
-                        <Grid item key={4} xs={12} sm={6} md={4}>
-                            <Card
-                                sx={{ height: '100%', display: 'flex', flexDirection: 'column' }}
-                            >
-                                <Box
-                                    component="img"
-                                    sx={{
-                                        height: 250,
-                                        width: 300,
-                                    }}
-                                    alt="The house from the offer."
-                                    src="https://source.unsplash.com/random"
-                                />
-                                <CardContent sx={{ flexGrow: 1 }}>
-                                    <Typography gutterBottom variant="h7" component="h2">
-                                        Impulse/Serval
-                                    </Typography>
-                                    <Typography>
-
-                                    </Typography>
-                                </CardContent>
-                                <CardActions>
-                                    <Button size="small">View</Button>
-                                    <Button size="small">Edit</Button>
-                                </CardActions>
-                            </Card>
-                        </Grid>
-                        <Grid item key={1} xs={12} sm={6} md={4}>
-                            <Card
-                                sx={{ height: '100%', display: 'flex', flexDirection: 'column' }}
-                            >
-                                <Box
-                                    component="img"
-                                    sx={{
-                                        height: 250,
-                                        width: 300,
-                                    }}
-                                    alt="The house from the offer."
-                                    src="https://source.unsplash.com/random"
-                                />
-                                <CardContent sx={{ flexGrow: 1 }}>
-                                    <Typography gutterBottom variant="h7" component="h2">
-                                        My learning
-                                    </Typography>
-                                    <Typography>
-
-                                    </Typography>
-                                </CardContent>
-                                <CardActions>
-                                    <Button size="small">View</Button>
-                                    <Button size="small">Edit</Button>
-                                </CardActions>
-                            </Card>
-                        </Grid>
-                        <Grid item key={1} xs={12} sm={6} md={4}>
-                            <Card
-                                sx={{ height: '100%', display: 'flex', flexDirection: 'column' }}
-                            >
-                                <Box
-                                    component="img"
-                                    sx={{
-                                        height: 250,
-                                        width: 300,
-                                    }}
-                                    alt="The house from the offer."
-                                    src="https://source.unsplash.com/random"
-                                />
-                                <CardContent sx={{ flexGrow: 1 }}>
-                                    <Typography gutterBottom variant="h7" component="h2">
-                                        Plural Sight
-                                    </Typography>
-                                    <Typography>
-
-                                    </Typography>
-                                </CardContent>
-                                <CardActions>
-                                    <Button size="small">View</Button>
-                                    <Button size="small">Edit</Button>
-                                </CardActions>
-                            </Card>
-                        </Grid>
-                        {/*))}*/}
-                    </Grid>
-                </Container>
             </main>
             {/* Footer */}
             <Box sx={{ bgcolor: 'background.paper', p: 6 }} component="footer">

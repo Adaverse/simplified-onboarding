@@ -16,6 +16,9 @@ import AddressForm from '../components/Form/AddressForm';
 import PaymentForm from '../components/Form/PaymentForm';
 import Review from '../components/Form/Review';
 import Navbar from '../components/navbar/navbar';
+import { useHistory, useLocation } from 'react-router-dom';
+import Alert from '@mui/material/Alert';
+import Stack from '@mui/material/Stack';
 
 function Copyright() {
   return (
@@ -35,7 +38,7 @@ const steps = ['Document Uploaded', 'Laptop Configuration', 'Tools and KT'];
 function getStepContent(step) {
   switch (step) {
     case 0:
-      return <AddressForm />;
+      return <AddressForm step={step} />;
     case 1:
       return <PaymentForm />;
     case 2:
@@ -47,8 +50,12 @@ function getStepContent(step) {
 
 const theme = createTheme();
 
-export default function Checkout() {
-  const [activeStep, setActiveStep] = React.useState(0);
+export default function StudentProcess(props) {
+    const history = useHistory();
+    const location = useLocation();
+  const [activeStep, setActiveStep] = React.useState(location.state.data ? Math.floor(location.state.data.progress/25) === 0 ? 0 : Math.floor(location.state.data.progress/25) - 1 : 0);
+    const [waiting, setWaiting] = React.useState(true)
+    const [user, setUser] = React.useState(localStorage.getItem('user'))
 
   const handleNext = () => {
     setActiveStep(activeStep + 1);
@@ -57,6 +64,16 @@ export default function Checkout() {
   const handleBack = () => {
     setActiveStep(activeStep - 1);
   };
+
+  React.useEffect(() => {
+    console.log(location);
+    console.log(Math.floor(location.state.data.progress/25));
+    console.log(waiting)
+    console.log(user !== 'admin')
+    setTimeout(() => {
+        setWaiting(false)
+    }, user !== 'admin' ? 5000 : 0)
+  }, []);
 
   return (
     <ThemeProvider theme={theme}>
@@ -99,6 +116,9 @@ export default function Checkout() {
             ) : (
               <React.Fragment>
                 {getStepContent(activeStep)}
+                {Math.floor(location.state.data.progress/25) === 1 && waiting && user !== 'admin' && <Box sx={{marginTop: 2}}>
+                    <Alert severity="info">Approval of your documents is still pending!</Alert>
+                </Box>}
                 <Box sx={{ display: 'flex', justifyContent: 'flex-end' }}>
                   {activeStep !== 0 && (
                     <Button onClick={handleBack} sx={{ mt: 3, ml: 1 }}>
@@ -106,13 +126,25 @@ export default function Checkout() {
                     </Button>
                   )}
 
-                  <Button
+                  {user === 'admin' ?
+
+                    <Button
                     variant="contained"
                     onClick={handleNext}
                     sx={{ mt: 3, ml: 1 }}
+                    disabled={Math.floor(location.state.data.progress/25) === 1 && waiting}
+                    >
+                    {activeStep === steps.length - 1  ? 'Place order' : Math.floor(location.state.data.progress/25) === 1 && activeStep === 0 ? 'Approve':'Next'}
+                    </Button>
+                   :
+                   <Button
+                    variant="contained"
+                    onClick={handleNext}
+                    sx={{ mt: 3, ml: 1 }}
+                    disabled={Math.floor(location.state.data.progress/25) === 1 && waiting}
                   >
-                    {activeStep === steps.length - 1 ? 'Place order' : 'Next'}
-                  </Button>
+                    {activeStep === steps.length - 1  ? 'Place order' : 'Complete'}
+                  </Button>}
                 </Box>
               </React.Fragment>
             )}

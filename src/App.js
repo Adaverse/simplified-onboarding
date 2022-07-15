@@ -5,7 +5,7 @@ import Homes from './pages/Homes';
 import SignIn from './pages/Signin';
 import Studentlist from './pages/studentlist';
 import DiscreteSliderLabel from './components/slider/slider'
-import Student from './pages/StudentProcess';
+import StudentProcess from './pages/StudentProcess';
 
 import {
     BrowserRouter as Router,
@@ -18,11 +18,11 @@ function App() {
         <Router>
             {/* <BrandExample /> */}
             <Switch>
-                <Route path="/homes/viewOnboarding">
+                <Route path="/viewOnboarding">
                     <Studentlist/>
                 </Route>
-                <Route path="/address">
-                    <Student/>
+                <Route path="/onboardProgress">
+                    <StudentProcess/>
                 </Route>
                 <Route path="/homes">
                     <Homes/>

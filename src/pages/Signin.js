@@ -39,6 +39,7 @@ export default function SignIn() {
       email: data.get('email'),
       password: data.get('password'),
     });
+    localStorage.setItem("user", data.get("email"));
     history.push("/homes");
   };
 

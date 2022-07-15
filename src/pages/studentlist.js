@@ -8,6 +8,8 @@ import Typography from '@mui/material/Typography';
 import Container from '@mui/material/Container';
 import Link from '@mui/material/Link';
 import { createTheme, ThemeProvider } from '@mui/material/styles';
+
+
 import Navbar from '../components/navbar/navbar';
 import Student1 from '../components/student/student1'
 import Student2 from '../components/student/student2'
@@ -15,6 +17,9 @@ import Student3 from '../components/student/student3'
 import Student4 from '../components/student/student4'
 import Student5 from '../components/student/student5'
 import Student6 from '../components/student/student6'
+import Student from '../components/student/Student'
+import {students} from "../components/student/data"
+
 
 function Copyright() {
   return (
@@ -84,14 +89,9 @@ export default function studentlist() {
         <Container sx={{ py: 4 }} maxWidth="md">
           {/* End hero unit */}
           <Grid container spacing={4}>
-            {/*{cards.map((card) => (*/}
-                <Student1/>
-                <Student2/>
-                <Student3/>
-                <Student4/>
-                <Student5/>
-                <Student6/>
-            {/*))}*/}
+            {students.map((item, index) => (
+                <Student name = {item.name} url = {item.url} progress1 = {item.progress}/>
+            ))}
         </Grid>
     </Container>
 </main>

@@ -56,7 +56,8 @@ function IconContainer(props: IconContainerProps) {
 
 
 
-export default function AddressForm() {
+export default function AddressForm({step}) {
+    const [user, setUser] = React.useState(localStorage.getItem('user'))
   return (
     <React.Fragment>
       <Typography variant="h6" gutterBottom>

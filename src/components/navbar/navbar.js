@@ -190,7 +190,7 @@ function Navbar() {
                 />
                 <Typography variant="h6" color="black" noWrap style={{ alignItems:'center',justifyContent:'space-between', display:'flex', flex: 0.09, cursor:'pointer'}}>
                     <Icon style={{color:'red', fontSize: 30}}>account_circle</Icon>
-                    {" "} John Doe
+                    {" "} {localStorage.getItem("user")}
                 </Typography>
                 </Toolbar>
             </AppBar>
