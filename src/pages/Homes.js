@@ -8,6 +8,7 @@ import CardContent from '@mui/material/CardContent';
 import CardMedia from '@mui/material/CardMedia';
 import CssBaseline from '@mui/material/CssBaseline';
 import Grid from '@mui/material/Grid';
+import { useHistory } from "react-router-dom";
 import Stack from '@mui/material/Stack';
 import Box from '@mui/material/Box';
 import Toolbar from '@mui/material/Toolbar';
@@ -35,6 +36,7 @@ const cards = [1, 2, 3, 4, 5, 6, 7, 8, 9];
 const theme = createTheme();
 
 export default function Homes() {
+
     return (
         <ThemeProvider theme={theme}>
             <CssBaseline />
@@ -47,11 +49,11 @@ export default function Homes() {
                     </Typography>
                 </Toolbar>
             </AppBar> */}
+
             <Navbar/>
             <main>
                 {/* Hero unit */}
-                <Box
-                    sx={{
+                <Box noValidate sx={{
                         bgcolor: 'background.paper',
                         pt: 8,
                         pb: 6,
@@ -78,8 +80,7 @@ export default function Homes() {
                             spacing={2}
                             justifyContent="center"
                         >
-                            <Button variant="contained">View Onboarding folks</Button>
-                            {/*<Button variant="outlined">Secondary action</Button>    */}
+                           <a href = "/address"> <Button variant="contained">Complete the Onboarding</Button> </a>
                         </Stack>
                     </Container>
                 </Box>
