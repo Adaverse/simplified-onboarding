@@ -81,8 +81,8 @@ export default function studentlist() {
               spacing={2}
               justifyContent="center"
             >
-              <Button variant="contained">Upload New Joiners File (.csv)</Button>
-              <Button variant="outlined">Upload Team requirements File (.csv)</Button>
+              <Button variant="contained" type = "file">Upload New Joiners File (.csv)</Button>
+              <Button variant="contained">Upload Team requirements(.csv)</Button>
             </Stack>
           </Container>
         </Box>
@@ -96,20 +96,21 @@ export default function studentlist() {
     </Container>
 </main>
 {/* Footer */}
-<Box sx={{ bgcolor: 'background.paper', p: 6 }} component="footer">
-    <Typography variant="h6" align="center" gutterBottom>
-        Footer
-    </Typography>
-    <Typography
-        variant="subtitle1"
-        align="center"
-        color="text.secondary"
-        component="p"
-    >
-        END OF PAGE
-    </Typography>
-    <Copyright />
-</Box>
+<Box sx={{ bgcolor: 'black', p: 6 }} component="footer" height = {200}>
+                <Typography variant="h6" align="center" gutterBottom color="white">
+                    Societe Generale
+                </Typography>
+                <Typography
+                    variant="subtitle1"
+                    align="center"
+                    color="white"
+                    component="p"
+                >
+                    
+                    The Future is you
+                </Typography>
+                <Copyright />
+            </Box>
 {/* End footer */}
 </ThemeProvider>
 );

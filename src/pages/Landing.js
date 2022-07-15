@@ -58,7 +58,23 @@ function Landing() {
         </Grid>
         </Grid>
         <Button variant="contained">Hello World</Button>
+        <Box sx={{ bgcolor: 'black', p: 6 }} component="footer" height = {200}>
+                <Typography variant="h6" align="center" gutterBottom color="white">
+                    Societe Generale
+                </Typography>
+                <Typography
+                    variant="subtitle1"
+                    align="center"
+                    color="white"
+                    component="p"
+                >
+                    
+                    The Future is you
+                </Typography>
+                <Copyright />
+            </Box>
       </>
+      
     );
 }
 

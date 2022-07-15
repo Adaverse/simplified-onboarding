@@ -145,7 +145,7 @@ function Navbar() {
                         </Grid> */}
                     </Grid>
                     <Typography style={{marginTop: 20}} variant="h6" gutterBottom>
-                        Preference
+                        Interest for Team Allocation
                     </Typography>
                     <Grid>
                         <Grid item xs={12} sm={6} style={{display:'flex', flexDirection: 'row', flexGrow: 1}}>

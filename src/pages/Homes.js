@@ -92,21 +92,20 @@ export default function Homes() {
                             align="center"
                             color="red"
                         >
-                            SOCIETE 
+                            CHILL 
                         </Typography>
                         <Typography     
                         component="span"
                             variant="h2"
                             align="center"
                             color="text.primary"
-                            > GENERALE</Typography>
+                            > BOARDING</Typography>
                         </div>
                         
                         
                         <Typography variant="h5" align="center" color="text.secondary" paragraph>
-                            Something short and leading about the collection below—its contents,
-                            the creator, etc. Make it short and sweet, but not too short so folks
-                            don&apos;t simply skip over it entirely.
+                            The all in one platform to meet the needs of On boarding process. It helps new Joiners, 
+                            to meet the team of their interest. It also makes the work of work of On boarding team easier.
                         </Typography>
                         <Stack
                             sx={{ pt: 4 }}
@@ -124,17 +123,18 @@ export default function Homes() {
                 </Box>
             </main>
             {/* Footer */}
-            <Box sx={{ bgcolor: 'background.paper', p: 6 }} component="footer">
-                <Typography variant="h6" align="center" gutterBottom>
-                    Footer
+            <Box sx={{ bgcolor: 'black', p: 6 }} component="footer" height = {200}>
+                <Typography variant="h6" align="center" gutterBottom color="white">
+                    Societe Generale
                 </Typography>
                 <Typography
                     variant="subtitle1"
                     align="center"
-                    color="text.secondary"
+                    color="white"
                     component="p"
                 >
-                    END OF PAGE
+                    
+                    The Future is you
                 </Typography>
                 <Copyright />
             </Box>

@@ -91,9 +91,22 @@ export default function StudentProcess(props) {
       </AppBar>
       <Container component="main" maxWidth="sm" sx={{ mb: 4 }}>
         <Paper variant="outlined" sx={{ my: { xs: 3, md: 6 }, p: { xs: 2, md: 3 } }}>
-          <Typography component="h1" variant="h4" align="center">
-            Go Onboarded
-          </Typography>
+        <div className='text-center mb-4'>
+                        <Typography
+                            component="span"
+                            variant="h2"
+                            align="center"
+                            color="red"
+                        >
+                            CHILL 
+                        </Typography>
+                        <Typography     
+                        component="span"
+                            variant="h2"
+                            align="center"
+                            color="text.primary"
+                            > BOARDING</Typography>
+                        </div>
           <Stepper activeStep={activeStep} sx={{ pt: 3, pb: 5 }}>
             {steps.map((label) => (
               <Step key={label}>
@@ -105,12 +118,10 @@ export default function StudentProcess(props) {
             {activeStep === steps.length ? (
               <React.Fragment>
                 <Typography variant="h5" gutterBottom>
-                  Thank you for your order.
+                  Thank you for joining Societe Generale.
                 </Typography>
                 <Typography variant="subtitle1">
-                  Your order number is #2001539. We have emailed your order
-                  confirmation, and will send you an update when your order has
-                  shipped.
+                  You have been scuccefully ChillBoarded. We have send you the email confirmation for the same.
                 </Typography>
               </React.Fragment>
             ) : (
@@ -134,7 +145,7 @@ export default function StudentProcess(props) {
                     sx={{ mt: 3, ml: 1 }}
                     disabled={Math.floor(location.state.data.progress/25) === 1 && waiting}
                     >
-                    {activeStep === steps.length - 1  ? 'Place order' : Math.floor(location.state.data.progress/25) === 1 && activeStep === 0 ? 'Approve':'Next'}
+                    {activeStep === steps.length - 1  ? 'Complete' : Math.floor(location.state.data.progress/25) === 1 && activeStep === 0 ? 'Approve':'Next'}
                     </Button>
                    :
                    <Button
@@ -143,7 +154,7 @@ export default function StudentProcess(props) {
                     sx={{ mt: 3, ml: 1 }}
                     disabled={Math.floor(location.state.data.progress/25) === 1 && waiting}
                   >
-                    {activeStep === steps.length - 1  ? 'Place order' : 'Complete'}
+                    {activeStep === steps.length - 1  ? 'Complete' : 'Complete'}
                   </Button>}
                 </Box>
               </React.Fragment>
@@ -152,6 +163,23 @@ export default function StudentProcess(props) {
         </Paper>
         <Copyright />
       </Container>
+      <Box sx={{ bgcolor: 'black', p: 6 }} component="footer" height = {200}>
+                <Typography variant="h6" align="center" gutterBottom color="white">
+                    Societe Generale
+                </Typography>
+                <Typography
+                    variant="subtitle1"
+                    align="center"
+                    color="white"
+                    component="p"
+                >
+                    
+                    The Future is you
+                </Typography>
+                <Copyright />
+            </Box>
     </ThemeProvider>
+
+
   );
 }

@@ -83,98 +83,34 @@ export default function AddressForm({step}) {
             Interest for Team Allocation
         </Typography>
 
-        </Grid>
-        <Grid item xs={12} sm={2}>
-            
-        </Grid>
-        
         
 
-        <Grid item xs={12} sm={6}>
-              Java
-
-        </Grid>
-        <Grid item xs={12} sm={6}>
-             <StyledRating
-      name="highlight-selected-only"
-      defaultValue={3}
-      IconContainerComponent={IconContainer}
-      getLabelText={(value: number) => customIcons[value].label}
-      highlightSelectedOnly
-        />
-        </Grid>
-
-        <Grid item xs={12} sm={6}>
-              Python
-
-        </Grid>
-        <Grid item xs={12} sm={6}>
-             <StyledRating
-      name="highlight-selected-only"
-      defaultValue={3}
-      IconContainerComponent={IconContainer}
-      getLabelText={(value: number) => customIcons[value].label}
-      highlightSelectedOnly
-        />
-        </Grid>
-
-        <Grid item xs={12} sm={6}>
-              .Net
-
-        </Grid>
-        <Grid item xs={12} sm={6}>
-             <StyledRating
-      name="highlight-selected-only"
-      defaultValue={3}
-      IconContainerComponent={IconContainer}
-      getLabelText={(value: number) => customIcons[value].label}
-      highlightSelectedOnly
-        />
-        </Grid>
-
-        <Grid item xs={12} sm={6}>
-              Big data
-
-        </Grid>
-        <Grid item xs={12} sm={6}>
-             <StyledRating
-      name="highlight-selected-only"
-      defaultValue={3}
-      IconContainerComponent={IconContainer}
-      getLabelText={(value: number) => customIcons[value].label}
-      highlightSelectedOnly
-        />
-        </Grid>
-
-        <Grid item xs={12} sm={6}>
-              Cloud(Azure)
-
-        </Grid>
-        <Grid item xs={12} sm={6}>
-             <StyledRating
-      name="highlight-selected-only"
-      defaultValue={3}
-      IconContainerComponent={IconContainer}
-      getLabelText={(value: number) => customIcons[value].label}
-      highlightSelectedOnly
-        />
-        </Grid>
-
-        <Grid item xs={12} sm={6}>
-              ML/AI
-
-        </Grid>
-        <Grid item xs={12} sm={6}>
-             <StyledRating
-      name="highlight-selected-only"
-      defaultValue={3}
-      IconContainerComponent={IconContainer}
-      getLabelText={(value: number) => customIcons[value].label}
-      highlightSelectedOnly
-        />
-        </Grid>
+        <Grid>
+                        <Grid item xs={12} sm={6} style={{display:'flex', flexDirection: 'row', flexGrow: 1}}>
+                            <Typography component="legend">Java</Typography>
+                            <Rating name="size-large" defaultValue={2} size="large" />
+                        </Grid>
+                        <Grid item xs={12} sm={6} style={{display:'flex', flexDirection: 'row', flexGrow: 1}}>
+                            <Typography component="legend">.NET</Typography>
+                            <Rating name="size-large" defaultValue={2} size="large" />
+                        </Grid>
+                        <Grid item xs={12} sm={6} style={{display:'flex', flexDirection: 'row', flexGrow: 1}}>
+                            <Typography component="legend">Python</Typography>
+                            <Rating name="size-large" defaultValue={2} size="large" />
+                        </Grid>
+                        <Grid item xs={12} sm={6} style={{display:'flex', flexDirection: 'row', flexGrow: 1}}>
+                            <Typography component="legend">Full Stack</Typography>
+                            <Rating name="size-large" defaultValue={2} size="large" />
+                        </Grid>
+                        <Grid item xs={12} sm={6} style={{display:'flex', flexDirection: 'row', flexGrow: 1}}>
+                            <Typography component="legend">Spark</Typography>
+                            <Rating name="size-large" defaultValue={2} size="large" />
+                        </Grid>
+                    </Grid>
 
         
+      </Grid>
+
       </Grid>
     </React.Fragment>
   );
