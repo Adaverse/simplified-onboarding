@@ -16,6 +16,7 @@ import Container from '@mui/material/Container';
 import Link from '@mui/material/Link';
 import { createTheme, ThemeProvider } from '@mui/material/styles';
 import Navbar from '../components/navbar/navbar';
+import { bgcolor, fontStyle } from '@mui/system';
 
 function Copyright() {
     return (
@@ -58,15 +59,24 @@ export default function Homes() {
                     }}
                 >
                     <Container maxWidth="sm">
+                        <div className='text-center mb-4'>
                         <Typography
-                            component="h1"
+                            component="span"
+                            variant="h2"
+                            align="center"
+                            color="red"
+                        >
+                            SOCIETE 
+                        </Typography>
+                        <Typography     
+                        component="span"
                             variant="h2"
                             align="center"
                             color="text.primary"
-                            gutterBottom
-                        >
-                            SOCIETE GENERALE
-                        </Typography>
+                            > GENERALE</Typography>
+                        </div>
+                        
+                        
                         <Typography variant="h5" align="center" color="text.secondary" paragraph>
                             Something short and leading about the collection below—its contents,
                             the creator, etc. Make it short and sweet, but not too short so folks
@@ -78,8 +88,10 @@ export default function Homes() {
                             spacing={2}
                             justifyContent="center"
                         >
-                            <Button variant="contained">View Onboarding folks</Button>
-                            {/*<Button variant="outlined">Secondary action</Button>    */}
+                            <a href='/homes/viewOnboarding'> 
+                                <Button variant="contained">View Onboarding folks</Button>
+                                {/*<Button variant="outlined">Secondary action</Button>    */}
+                            </a>
                         </Stack>
                     </Container>
                 </Box>
@@ -102,7 +114,7 @@ export default function Homes() {
                                     />
                                     <CardContent sx={{ flexGrow: 1 }}>
                                         <Typography gutterBottom variant="h7" component="h2">
-                                            RAMCO Payroll department , click to view
+                                            RAMCO Payroll department
                                         </Typography>
                                         <Typography>
 
@@ -129,7 +141,7 @@ export default function Homes() {
                                 />
                                 <CardContent sx={{ flexGrow: 1 }}>
                                     <Typography gutterBottom variant="h7" component="h2">
-                                        Self Service , click to view
+                                        Self Service
                                     </Typography>
                                     <Typography>
 
@@ -156,7 +168,7 @@ export default function Homes() {
                                 />
                                 <CardContent sx={{ flexGrow: 1 }}>
                                     <Typography gutterBottom variant="h7" component="h2">
-                                        My Digital Workplace , click to view
+                                        My Digital Workplace
                                     </Typography>
                                     <Typography>
 
@@ -210,7 +222,7 @@ export default function Homes() {
                                 />
                                 <CardContent sx={{ flexGrow: 1 }}>
                                     <Typography gutterBottom variant="h7" component="h2">
-                                        My learning , click to view
+                                        My learning
                                     </Typography>
                                     <Typography>
 
@@ -237,7 +249,7 @@ export default function Homes() {
                                 />
                                 <CardContent sx={{ flexGrow: 1 }}>
                                     <Typography gutterBottom variant="h7" component="h2">
-                                        Plural Sight , click to view
+                                        Plural Sight
                                     </Typography>
                                     <Typography>
 

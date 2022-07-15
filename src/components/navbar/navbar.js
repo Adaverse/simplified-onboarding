@@ -182,11 +182,11 @@ function Navbar() {
                 <Box
                     component="img"
                     sx={{
-                        height: 30,
-                        width: 150,
+                        height: 50,
+                        width: 200,
                     }}
                     alt="The house from the offer."
-                    src="/assets/sg1.png"
+                    src="/assets/sglogo.jpeg"
                 />
                 <Typography variant="h6" color="black" noWrap style={{ alignItems:'center',justifyContent:'space-between', display:'flex', flex: 0.09, cursor:'pointer'}}>
                     <Icon style={{color:'red', fontSize: 30}}>account_circle</Icon>
