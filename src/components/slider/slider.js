@@ -25,20 +25,21 @@ const marks = [
   },
 ];
 
-
+function valuetext(value: number) {
+  return `${value}°C`;
+}
 
 export default function DiscreteSliderLabel() {
   return (
-    <Box sx={{ height: 150 }} marginLeft = {60}>
+    <Box sx={{ width: 900 }} marginLeft = {60}>
         <br/> <br/> <br/>
       <Slider
         aria-label="Always visible"
         defaultValue={80}
-        // getAriaValueText={valuetext}
+        getAriaValueText={valuetext}
         step={25}
         marks={marks}
         valueLabelDisplay="on"
-        orientation="vertical"
       />
       <br/> <br/> <br/>
     </Box>
